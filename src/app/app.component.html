@@ -5,12 +5,12 @@
     <small>Não tem nenhuma tarefa hoje!</small></p>
   <li *ngFor="let todo of todos">
     {{ todo.title }} -
-    <button (click)="remove(todo)"><i class="far fa-trash-alt"></i></button> 
-    <button *ngIf="!todo.done" (click)="markAsDone(todo)"><i class="fas fa-check-circle"></i>CONCLUIR</button>  
+    <button (click)="remove(todo)"><i class="far fa-trash-alt"></i></button>
+    <button *ngIf="!todo.done" (click)="markAsDone(todo)"><i class="fas fa-check-circle"></i>CONCLUIR</button>
     <button *ngIf="todo.done" (click)="markAsUndone(todo)"><i class="fas fa-check"></i>Refazer</button> | |
     <button (click)="remove(todo)">REMOVER</button>
   </li>
-</ul>
+</ul> 
 
 <div id="modal" *ngIf="mode=='add'" class="animeted flipInX">
 <h1 class="text-center">Nova Tarefa</h1>
